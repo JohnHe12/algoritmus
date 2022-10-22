@@ -10,7 +10,9 @@ Usage: Kdtree and KnnSearch
 """
 
 from operator import itemgetter
+from random import randint
 import sys
+from time import time
 sys.path.append("3D point cloud process/tree/BTS/")
 from result_set import *
 
@@ -163,6 +165,8 @@ class Kdtree:
         """
         X : the K dimension point cloud : KD list ------> int or float
         """
+
+        self.data = X
         idxs = list(range(len(X)))
         que = [(self.root,idxs)]
 
@@ -252,6 +256,7 @@ class Kdtree:
         feature = nd.feature
 
         return abs(xi[feature]-nd.split[feature])
+    
 
     def knn(self,xi,result_set:KnnResultSet):
         
@@ -309,23 +314,40 @@ class Kdtree:
 
                 if nd_cur.father is None:
 
-                    return
+                    break
 
                 nd_cur = nd_cur.father
 
                 step_1 = False
 
-X = [[8, 2], [10, 9], [4, 10], [6, 0], [1, 8], [5, 4], [7, 9], [6, 5], [1, 9], [6, 6]]
 
-kd_tree = Kdtree()
-kd_tree.build_tree(X)
 
-xi = [10,7]
-result_set = KnnResultSet(2)
-kd_tree.knn(xi,result_set)
-print(result_set)
+if __name__ == "__main__":
 
-# print(kd_tree.root.split)
+    tm = []
+
+    for _ in range(10):
+
+        X = [[randint(0,10000) for _ in range(2)] for _ in range(10000)]
+
+        kd_tree = Kdtree()
+        kd_tree.build_tree(X)
+
+        xi = [randint(0,10000) for _ in range(2)]
+        result_set = KnnResultSet(8)
+        start = time()
+        kd_tree.knn(xi,result_set)
+        end = time()
+        t = end-start
+
+        tm.append(t)
+
+    print(sum(tm)/10)
+
+
+        # print(result_set)
+        # print(kd_tree.root.visit)
+
 
 
 
