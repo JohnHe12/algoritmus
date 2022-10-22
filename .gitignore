@@ -7,3 +7,8 @@
 3D point cloud process/.DS_Store
 .DS_Store
 3D point cloud process/tree/BTS/__pycache__
+3D point cloud process/tree/kdtree/kd2.py
+3D point cloud process/tree/kdtree/test.py
+3D point cloud process/tree/kdtree/kdtree.py
+.vscode/settings.json
+3D point cloud process/tree/kdtree/000000.bin

@@ -9,7 +9,7 @@ class KnnResultSet:
 
         self._capacity = capacity
         self._count = 0
-        self._init_worst_distance = 1e10
+        self._init_worst_distance = float("inf")
         self._worst_distance = self._init_worst_distance
         self._dist_index_list = [DistIndex(self._worst_distance,0) 
                             for i in range(capacity)]
