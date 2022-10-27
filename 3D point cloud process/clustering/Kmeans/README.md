@@ -7,3 +7,5 @@
 3. Re-compute the K centers by the mean of each group
 
 4. Iterate step 2 & 3.
+
+![](https://github.com/JohnHe12/algoritmus/blob/main/3D%20point%20cloud%20process/clustering/Kmeans/image/Figure_1.png)
