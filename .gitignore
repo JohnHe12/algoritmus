@@ -17,3 +17,5 @@
 .gitignore
 3D point cloud process/clustering/Kmeans/test.py
 3D point cloud process/tree/kdtree/__pycache__/kd.cpython-38.pyc
+3D point cloud process/clustering/Kmeans/__pycache__/kmeans.cpython-37.pyc
+3D point cloud process/.DS_Store
