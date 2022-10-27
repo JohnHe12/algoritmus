@@ -12,3 +12,8 @@
 3D point cloud process/tree/kdtree/kdtree.py
 .vscode/settings.json
 3D point cloud process/tree/kdtree/000000.bin
+3D point cloud process/clustering/Kmeans/from_zhihu.py
+3D point cloud process/tree/kdtree/__pycache__/kd.cpython-37.pyc
+.gitignore
+3D point cloud process/clustering/Kmeans/test.py
+3D point cloud process/tree/kdtree/__pycache__/kd.cpython-38.pyc
