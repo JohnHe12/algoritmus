@@ -5,9 +5,6 @@ Usage: visualization k-means
 
 """
 
-
-
-from pip import main
 from kmeans import *
 import matplotlib.pyplot as plt
 from matplotlib import colors
