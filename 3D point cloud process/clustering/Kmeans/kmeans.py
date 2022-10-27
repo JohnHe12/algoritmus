@@ -24,7 +24,7 @@ IdxSp = NewType("IdxSp",List[List[int]])
 
 class K_Means(object):
     # k是分组数；tolerance‘中心点误差’；max_iter是迭代次数
-    def __init__(self, n_clusters=2, tolerance=0.0001, max_iter=300):
+    def __init__(self, *,n_clusters=2, tolerance=0.0001, max_iter=300):
         self.k_ = n_clusters
         self.tolerance_ = tolerance
         self.max_iter_ = max_iter
