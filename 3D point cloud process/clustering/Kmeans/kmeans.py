@@ -121,7 +121,7 @@ class K_Means(object):
 
 
 
-    def fit(self, datas:ndarray):
+    def fit(self, datas:ndarray,remaining_float=3):
         # 作业1
         # 屏蔽开始
 
@@ -141,7 +141,7 @@ class K_Means(object):
 
             turn -= 1
 
-        self.centers = np.array(center_points)
+        self.centers = np.around(center_points,remaining_float)
 
         if turn == 0:
 
